@@ -1,0 +1,281 @@
+/* VARIABLES */
+$break-width: 750px
+$main-color: #B5B5B5
+$hover-nav: #DDDDDD
+$user-text-color: #D6D6D6
+$user-text-toggle-color: #ADD8E6
+
+/* ANIMATION*/
+@-webkit-keyframes header-swipe
+    from 
+        opacity: 0 
+        -webkit-transform: translateX(-100%) 
+        -webkit-transform: translateX(-100%)
+    to  
+        opacity: 1 
+        -webkit-transform: translateX(0) 
+        -webkit-transform: translateX(0)
+        
+@-moz-keyframes header-swipe
+    from 
+        opacity: 0 
+        -moz-transform: translateX(-100%) 
+        -moz-transform: translateX(-100%)
+    to 
+        opacity: 1 
+        -moz-transform: translateX(0) 
+        -moz-transform: translateX(0)
+        
+@keyframes header-swipe
+    from 
+        opacity: 0 
+        transform: translateX(-100%) 
+        transform: translateX(-100%)
+    to 
+        opacity: 1 
+        transform: translateX(0) 
+        transform: translateX(0)
+        
+@keyframes frombottom 
+    from 
+        opacity: 0 
+        transform: translateY(80px)
+    to  
+        opacity: 1
+        transform: translateY(0px)
+
+@-moz-keyframes frombottom 
+    from 
+        opacity: 0
+        -moz-transform: translateY(80px)
+    to   
+        opacity: 1
+        -moz-transform: translateY(0px)
+
+@-webkit-keyframes frombottom 
+    from  
+        opacity: 0
+        -webkit-transform: translateY(80px)
+    to   
+        opacity: 1
+        -webkit-transform: translateY(0px)
+
+
+/* BASE */
+html,
+body
+    font-family: sans-serif
+    font-size: 1em
+    line-height: 1.4
+    height: 100%
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    color: #000
+    font-weight: bold
+
+.main-site-content 
+    padding-top: 80px
+
+/* HEADER */
+.main-header 
+    position: fixed
+    left: 0
+    right: 0
+    height: 66px
+    line-height: 66px
+    color: #fff
+    background-color: $main-color
+    -webkit-animation: header-swipe 1.7s
+    -moz-animation: header-swipe 1.7s
+    animation: header-swipe 1.7s
+    .header-logo
+        float: left
+        height: 66px
+        padding: 0
+        font-size: 18px
+        line-height: 20px
+        .logo-big
+            width: 250px
+        .logo-small
+            width: 65px
+    .header-nav,
+    .button-help
+        font-size: 0
+        li
+            list-style: none
+            display: inline-block
+            border-left: 1px solid #fff
+            font-size: 16px
+            &:last-child
+                border-right: 1px solid #fff 
+        a
+            padding: 0 10px
+            display: inline-block 
+            &:hover
+                color: #000
+                text-decoration: none
+                background-color: $hover-nav
+
+
+/* MAIN CONTENT*/
+.main-site-grid
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    .main-site-grid-column
+        background-color: $main-color
+	
+    .column-left
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-flex-basis: 250px
+        -ms-flex-preferred-size: 250px
+        flex-basis: 250px
+        height: 220px
+        -webkit-animation: frombottom .5s ease-in
+        -moz-animation: frombottom .5s ease-in
+        animation: frombottom .5s ease-in
+        h2
+            margin: auto
+            width: 100px
+    .column-middle
+        -webkit-flex-basis: calc(100% - 470px)
+        -ms-flex-preferred-size: calc(100% - 470px)
+        flex-basis: calc(100% - 470px)
+        height: 600px
+        margin: 0 10px
+        text-align: center
+        -webkit-animation: frombottom 1s ease-in
+        -moz-animation: frombottom 1s ease-in
+        animation: frombottom 1s ease-in
+        h2
+            margin-bottom: 30px
+        .user-list
+            .user-item
+                background-color: $user-text-color
+                height: 50px
+                width: 90%
+                margin: 10px auto
+                cursor: pointer
+                overflow: hidden
+                list-style: none
+                &-active
+                    background-color: $user-text-toggle-color
+                .user-image
+                    height: 50px
+                    float: left
+                .user-descr
+                    line-height: 1.1
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 3
+                    -webkit-box-orient: vertical
+    .column-right
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-flex-basis: 200px
+        -ms-flex-preferred-size: 200px
+        flex-basis: 200px
+        height: 600px
+        -webkit-animation: frombottom .5s ease-in
+        -moz-animation: frombottom .5s ease-in
+        animation: frombottom .5s ease-in
+        h2
+            margin: auto
+            width: 105px
+
+/* RESPONSIVE */
+@media only screen and (max-width:  $break-width) 
+    .site-swiper,
+    .site-container
+        height: 100%
+  
+    .site-container 
+        overflow: scroll
+  
+    .site-swiper 
+        -webkit-transition-duration: 0.3s
+        transition-duration: 0.3s
+        -webkit-transform: translateX(0px)
+        transform: translateX(0px)
+  
+    .main-site-content
+        position: absolute
+        top: 80px
+        right: 0
+        left: 0
+        bottom: 0
+        padding-top: 0
+    
+    .is-sidebar .site-swiper 
+        transition: 1.5s
+        -webkit-transform: translateX(250px)
+        transform: translateX(250px)
+
+    .main-header
+        position: static
+        .header-icon 
+            position: relative
+            display: block
+            float: left
+            width: 50px
+            height: 66px
+            cursor: pointer
+            &:after 
+                content: ''
+                position: absolute
+                display: block
+                width: 1.4rem
+                height: 0
+                top: 16px
+                left: 15px
+                box-shadow: 0 11px 0 2px #fff, 0 18px 0 2px #fff, 0 25px 0 2px #fff
+        .header-nav 
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            background-color: #6A6A6A
+            width: 250px
+            -webkit-transform: translateX(-250px)
+            transform: translateX(-250px)
+            li
+                display: block
+                border-left: none
+                border-bottom: 1px solid #fff
+                &:last-child
+                    border-right: none
+            a 
+                display: block
+                height: 40px
+                text-align: center
+                line-height: 40px
+                color: #fff
+    
+    .main-site-grid
+        -ms-flex-direction: column
+        flex-direction: column
+        .column-left
+            -webkit-flex-basis: 220px
+            -ms-flex-preferred-size: 220px
+            flex-basis: 220px
+            margin-bottom: 20px
+            h2
+                width: 200px
+        .column-middle 
+            margin: 0 0 20px 0
+            -webkit-flex-basis: 400px
+            -ms-flex-preferred-size: 400px
+            flex-basis: 400px
+        .column-right
+            -webkit-flex-basis: 85px
+            -ms-flex-preferred-size: 85px
+            flex-basis: 85px
+            margin-bottom: 20px
+            h2
+                width: 200px

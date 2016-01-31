@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="site-container">
+        <div class="site-swiper">
+            <!-- HEADER WITH NAVIGATION -->
+            <header class="main-header">
+                <a href="#" class="header-icon" id="header-icon"></a>
+                <a class="header-logo hidden-xs" href="#">
+                    <img src="img/logo-big-image.png" alt="Logo big image" class="logo-big">
+                </a>
+                <a class="header-logo visible-xs" href="#">
+                    <img src="img/logo-small-image.png" alt="Logo small image" class="logo-small">
+                </a>
+
+                <nav class="header-nav pull-left">
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                </nav>
+
+                <nav class="button-help pull-right">
+                    <li><a href="#">Help button</a></li>
+                </nav>
+            </header>
+            <!-- END HEADER WITH NAVIGATION -->
+
+            <!-- MAIN SITE CONTENT -->
+            <div class="main-site-content">
+                <div class="main-site-grid">
+                    <div class="main-site-grid-column column-left">
+                        <h2 class="hidden-xs">Block 1 250px</h2>
+                        <h2 class="visible-xs">Block 1 100%</h2>
+                    </div>
+                    <div class="main-site-grid-column column-middle">
+                        <h2 class="hidden-xs">Block 2</h2>
+                        <h2 class="visible-xs">Block 2 100%</h2>
+                        <ul class="user-list">
+                            <li class="user-item">
+                                <img src="img/user.png" alt="user image" class="user-image">
+                                <div class="user-descr">
+                                    Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this. Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this.
+                                </div>
+                            </li>
+                            <li class="user-item">
+                                <img src="img/user.png" alt="user image" class="user-image">
+                                <div class="user-descr">
+                                    Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this. Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this.
+                                </div>
+                            </li>
+                            <li class="user-item">
+                                <img src="img/user.png" alt="user image" class="user-image">
+                                <div class="user-descr">
+                                    Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this. Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this.
+                                </div>
+                            </li>
+                            <li class="user-item">
+                                <img src="img/user.png" alt="user image" class="user-image">
+                                <div class="user-descr">
+                                    Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this. Here goes very long text that shouldn`t stretch this block nor by width nor by height. It should be cut by three periods like this.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-site-grid-column column-right">
+                        <h2 class="hidden-xs">Block 3 200px</h2>
+                        <h2 class="visible-xs">Block 3 100%</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN SITE CONTENT -->
+        </div>
+    </div>
+
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
